@@ -1,0 +1,81 @@
+html, body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+h1 {
+    font-size: clamp(28px, 5vw, 48px);
+}
+
+h2 {
+    font-size: clamp(20px, 4vw, 32px);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+footer img {
+    transition: 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.2);
+}
+
+.nav-link {
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* --- ESTILIZAÇÃO DO BOTÃO DE TEMA (NAVBAR SEMPRE ESCURA) --- */
+
+/* Como a navbar é sempre escura, o botão precisa ter letras e bordas claras em ambos os modos */
+#btn-tema {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+/* Efeito ao passar o mouse (Hover) */
+#btn-tema:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Ajuste sutil se você quiser diferenciar o botão no modo claro (opcional) */
+html[data-bs-theme="light"] #btn-tema {
+    border-color: #e0e0e0;
+    color: #e0e0e0;
+}
+html[data-bs-theme="light"] #btn-tema:hover {
+    background-color: #e0e0e0;
+    color: #000000;
+}
+
+/* --- CUSTOMIZAÇÃO DE NAV E FOOTER --- */
+
+/* Tom ultra escuro para destacar no Modo Escuro */
+.bg-super-dark {
+    background-color: #0b0b0b !important;
+    border-bottom: 1px solid #222;
+}
+footer.bg-super-dark {
+    border-top: 1px solid #222;
+}
+
+/* Transições suaves globais */
+html, body, section, .table, input, textarea, button, .navbar, footer {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
